@@ -1,6 +1,9 @@
-<h5><a href="/client/products">Home</a></h5>
-
 <h1><%= @product["name"] %></h1>
 <img src="<%= @product["image_url"] %>" alt="<%= @product["name"] %>">
 <p><%= @product["description"] %></p>
-<h3>Price: $<%= @product["price"] %></h3>
+<h3>Price: <%= @product["formatted"]["price"] %></h3>
+
+<div>
+  <a href="/client/products/<%= @product['id'] %>/edit">Edit Product</a>
+  <a href="/client/products/<%= @product['id'] %>" data-method="delete">Delete Product</a>
+</div>
