@@ -1,0 +1,17 @@
+body {
+  background-image: url('circles-dark.png');
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+}
+
+img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.index_link{
+  color: midnightblue;
+}
+
+.index_link:hover{
+  color: white;
+}

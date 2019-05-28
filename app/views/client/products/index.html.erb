@@ -1,5 +1,16 @@
-<% @products.each do |product| %>
-  <a href="/client/products/<%= product['id'] %>"><h1><%= product["name"] %></h1></a>
-  <p>Description: <%= product["description"] %></p>
-  <h4>Price: <%= product["formatted"]["price"] %></h4>
-<% end %>
+<div class="row">
+  <% @products.each do |product| %>
+    <div class="col-md-4">
+      <div class="card bg-secondary text-white" style="width: 18rem;">
+        <img src="<%= product["image_url"] %>" class="card-img-top" alt="<%= product["name"] %>">
+        <div class="card-body">
+          <a class="index_link" href="/client/products/<%= product['id'] %>"><h5 class="card-title text-center"><%= product["name"] %></h5></a>
+          <p class="card-text text-center"><%= product["description"] %></p>
+          <p class="card-text text-center">Price: <%= product["formatted"]["price"] %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
